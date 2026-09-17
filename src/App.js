@@ -4,6 +4,13 @@ import Header from './components/Header';
 import HeroSlider from './components/HeroSlider';
 import About from './components/About';
 import EquipmentCatalog from './components/EquipmentCatalog';
+import WorksSection, { worksData } from './components/WorksSection';
+import StepsSection, { stepsData } from './components/StepsSection';
+import PartnersSection, { partnersData } from './components/PartnersSection';
+import MapSection from './components/MapSection';
+import CallbackSection from './components/CallbackSection';
+import Footer from './components/Footer';
+import ReviewModal from './components/ReviewModal';
 
 const ORG_NAME = 'ЕГДС';
 
@@ -41,9 +48,15 @@ function App() {
         <HeroSlider />
         <About title={aboutTitle} />
         <EquipmentCatalog items={equipmentItems} />
+        <WorksSection works={worksData} />
+        <StepsSection steps={stepsData} />
+        <PartnersSection partners={partnersData} />
+        <MapSection />
+        <CallbackSection />
       </main>
+      <Footer orgName={ORG_NAME} />
+      <ReviewModal />
     </div>
   );
 }
-
 export default App;
