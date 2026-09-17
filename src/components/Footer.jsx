@@ -1,124 +1,104 @@
 import React from 'react';
 
-function Header({ orgName }) {
+function Footer({ orgName }) {
   return (
-    <header className="header" id="header">
-      <div className="header-top">
-        <div className="container">
-          <div className="header-top__wrapper">
-            <nav className="header-top__nav">
-              <ul>
-                <li>
-                  <a href="#">
-                    <span className="ru">Темная тема</span>
-                    <span className="en">Dark theme</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span className="ru">Светлая тема</span>
-                    <span className="en">Light theme</span>
-                  </a>
-                </li>
-                <li className="lang-switcher">
-                  <button type="button" className="lang-btn active">RUS</button>
-                  <button type="button" className="lang-btn">ENG</button>
-                </li>
-              </ul>
-            </nav>
-            <div className="header-top__address">
-              <a className="header-location" href="#">
-                <span className="ru">г. СПБ, наб. р. Карповки, 5И</span>
-                <span className="en">St. Petersburg, Karpovka Embankment, 5I</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="header-center">
-        <div className="container-2">
-          <div className="header-center__wrapper">
-            <div className="header-center__logo-block">
-              <a className="header-logo" href="/">
-                <img src="/assets/logo.png" alt="logo" className="logo-img" />
-                <div className="logo-text-group">
-                  <span className="logo-name">{orgName}</span>
-                  <span className="logo-desc">
-                    <span className="ru">Единая Городская Диспетчерская Служба Санкт-Петербурга</span>
-                    <span className="en">Unified City Dispatch Service of St. Petersburg</span>
-                  </span>
-                </div>
-              </a>
-            </div>
-
-            <div className="header-contacts-group">
-              <div className="header-contact">
-                <div className="contact-icon">
-                  <img src="/assets/envelope-regular 1.png" alt="mail" className="custom-icon" />
-                </div>
-                <div className="contact-content">
-                  <a href="mailto:office@egdsk-spb.ru" className="contact-link">office@egdsk-spb.ru</a>
-                </div>
-              </div>
-
-              <div className="header-contact">
-                <div className="contact-icon">
-                  <img src="/assets/lucide_phone-call.png" alt="phone" className="custom-icon" />
-                </div>
-                <div className="contact-content">
-                  <a href="tel:+78001003899" className="contact-link">+7(800)100-38-99</a>
-                </div>
-              </div>
-
-              <div className="header-contact">
-                <div className="contact-icon" style={{ width: '20px' }}></div>
-                <div className="contact-content">
-                  <a href="tel:+78123093663" className="contact-link">+7(812)309-36-63</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <nav className="header-bottom">
-        <div className="container-2">
-          <div className="header-bottom__wrapper">
-            <ul className="main-nav">
-              <li className="has-dropdown main-nav__item--catalog">
-                <a href="#" className="catalog-btn">
-                  <span className="ru">Каталог Оборудования</span>
-                  <span className="en">Equipment Catalog</span>
-                </a>
-                <ul className="dropdown-menu">
-                  <li><a href="avtomatika.html"><span className="ru">Автоматика проезда</span><span className="en">Access Automation</span></a></li>
-                  <li><a href="radioupravlenie.html"><span className="ru">Радиоуправление</span><span className="en">Radio Control</span></a></li>
-                  <li><a href="svobodnyy-vyezd.html"><span className="ru">Свободный выезд</span><span className="en">Free Exit</span></a></li>
-                  <li><a href="full-catalog.html"><span className="ru">Полный каталог</span><span className="en">Full Catalog</span></a></li>
-                </ul>
-              </li>
+    <footer className="site-footer">
+      <div className="footer-container">
+        <div className="footer-top">
+          <div className="footer-col col-help">
+            <h4 className="footer-heading heading-help">
+              <span className="ru">Услуги</span><span className="en">Help</span>
+            </h4>
+            <ul className="footer-list list-help">
               <li><a href="card.html"><span className="ru">Корзина</span><span className="en">Cart</span></a></li>
               <li><a href="favorites.html"><span className="ru">Избранное</span><span className="en">Favorites</span></a></li>
+              <li><a href="lk.html"><span className="ru">Личный кабинет</span><span className="en">Account</span></a></li>
+              <li><a href="full-catalog.html"><span className="ru">Полный котолог</span><span className="en">Full catalog</span></a></li>
             </ul>
+          </div>
 
-            <button className="burger-btn" aria-label="Меню">
-              <span></span><span></span><span></span>
-            </button>
+          <div className="footer-col col-services">
+            <h4 className="footer-heading heading-services">
+              <span className="ru">Товары</span><span className="en">Services</span>
+            </h4>
+            <ul className="footer-list list-services">
+              <li><a href="avtomatika.html"><span className="ru">Автоматика проезда</span><span className="en">Access Automation</span></a></li>
+              <li><a href="svobodnyy-vyezd.html"><span className="ru">Свободный выезд</span><span className="en">Free Exit</span></a></li>
+              <li><a href="radioupravlenie.html"><span className="ru">Радиоуправление</span><span className="en">Radio Control</span></a></li>
+            </ul>
+          </div>
 
-            <div className="mobile-icons">
-              <a href="full-catalog.html" title="Поиск"></a>
-              <a href="card.html" title="Корзина"></a>
-            </div>
-
-            <div className="header-right-group">
-              <div className="auth-zone"></div>
+          <div className="footer-col col-products">
+            <h4 className="footer-heading heading-products">
+              <span className="ru">Настройки</span><span className="en">Settings</span>
+            </h4>
+            <div className="products-grid-wrapper">
+              <ul className="footer-list list-products-left">
+                <li><a href="#"><span className="ru">Тёмная тема</span><span className="en">Dark theme</span></a></li>
+                <li><a href="#"><span className="ru">Светлая тема</span><span className="en">Light theme</span></a></li>
+                <li><a href="#"><span className="ru">Терминал тема</span><span className="en">Terminal theme</span></a></li>
+                <li><a href="#"><span className="ru">Русский язык</span><span className="en">Russian</span></a></li>
+              </ul>
+              <ul className="footer-list list-products-right">
+                <li><a href="#"><span className="ru">A Обычный шрифт</span><span className="en">A Normal font</span></a></li>
+                <li><a href="#"><span className="ru">A+ Средний шрифт</span><span className="en">A+ Medium font</span></a></li>
+                <li><a href="#"><span className="ru">A++ Большой шрифт</span><span className="en">A++ Large font</span></a></li>
+                <li><a href="#"><span className="ru">Английский язык</span><span className="en">English</span></a></li>
+              </ul>
             </div>
           </div>
+
+          <div className="footer-col col-contacts">
+            <h4 className="footer-heading heading-contacts">
+              <span className="ru">Контакты</span><span className="en">Contacts</span>
+            </h4>
+            <ul className="spec-contact-list">
+              <li className="spec-contact-item">
+                <div className="spec-contact-icon"><i className="fa fa-map-marker"></i></div>
+                <div className="spec-contact-content">
+                  <span className="spec-contact-text">
+                    <span className="ru">Санкт-Петербург, наб. р. Карповки 5И</span>
+                    <span className="en">St. Petersburg, Karpovka Embankment, 5I</span>
+                  </span>
+                </div>
+              </li>
+              <li className="spec-contact-item">
+                <div className="spec-contact-icon"><i className="fa fa-phone"></i></div>
+                <div className="spec-contact-content">
+                  <span className="spec-contact-text">
+                    <span className="ru">+7(812)309-36-63</span>
+                    <span className="en">+7(812)309-36-63</span>
+                  </span>
+                </div>
+              </li>
+              <li className="spec-contact-item">
+                <div className="spec-contact-icon"><i className="fa fa-envelope"></i></div>
+                <div className="spec-contact-content">
+                  <a href="mailto:office@intellekt-pro.ru" className="spec-contact-link">office@intellekt-pro.ru</a>
+                </div>
+              </li>
+              <li className="spec-contact-item">
+                <div className="spec-contact-icon"><i className="fa fa-clock-o"></i></div>
+                <div className="spec-contact-content">
+                  <span className="spec-contact-text">
+                    <span className="ru">Пн-Пт, 10-19</span>
+                    <span className="en">Mon-Fri, 10:00-19:00</span>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-      </nav>
-    </header>
+
+        <div className="footer-bottom">
+          <p className="copyright-text">
+            <span className="ru">2010-2024, {orgName} | Системы безопасности в Санкт-Петербурге (СПБ) | Интеллект Про | Все права защищены.<br />Информация о ценах на сайте не является публичной офертой.</span>
+            <span className="en">2010-2024, {orgName} | Security Systems in St. Petersburg | Intellekt Pro | All rights reserved.<br />Price information on the website is not a public offer.</span>
+          </p>
+        </div>
+      </div>
+    </footer>
   );
 }
 
-export default Header;
+export default Footer;
