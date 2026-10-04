@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "category": "radioupravlenie",
+    "name": { "ru": "Устройство считывающее 8660", "en": "8660 Reading Device" },
+    "price": 5750,
+    "image": "/assets/13.png",
+    "shortDescription": {
+      "ru": "Предназначено для систем контроля доступа (СКУД). Считывает номера радиобрелоков на частоте 434 МГц и передает код в контроллер по протоколам iButton или Wiegand.",
+      "en": "Designed for access control systems (ACS). Reads radio key fob numbers at 434 MHz frequency and transmits code to controller via iButton or Wiegand protocols."
+    },
+    "specs": [
+      { "label": { "ru": "Частота", "en": "Frequency" }, "value": "434 МГц" },
+      { "label": { "ru": "Протоколы", "en": "Protocols" }, "value": "iButton / Wiegand" },
+      { "label": { "ru": "Назначение", "en": "Purpose" }, "value": "СКУД" }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "radioupravlenie",
+    "name": { "ru": "Комплект (Считыватель 8660 + Z-5R Net)", "en": "Kit (8660 Reader + Z-5R Net)" },
+    "price": 14000,
+    "image": "/assets/14.jpg",
+    "shortDescription": {
+      "ru": "Готовое решение для организации полноценной системы управления доступом на базе сетевого контроллера и конвертера Z-397 Web.",
+      "en": "Ready-made solution for organizing a full-featured access control system based on network controller and Z-397 Web converter."
+    },
+    "specs": [
+      { "label": { "ru": "Состав", "en": "Includes" }, "value": "8660 + Z-5R Net" },
+      { "label": { "ru": "Тип", "en": "Type" }, "value": { "ru": "Сетевой контроллер", "en": "Network controller" } },
+      { "label": { "ru": "Конвертер", "en": "Converter" }, "value": "Z-397 Web" }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "radioupravlenie",
+    "name": { "ru": "Мини-пульт двухканальный Radio 8101-2M", "en": "Radio 8101-2M Dual-Channel Mini Remote" },
+    "price": 2100,
+    "image": "/assets/15.webp",
+    "shortDescription": {
+      "ru": "Компактный пульт ДУ для управления воротами, шлагбаумами и роллетами. Поддерживает два независимых канала управления.",
+      "en": "Compact remote control for managing gates, barrier gates and roller shutters. Supports two independent control channels."
+    },
+    "specs": [
+      { "label": { "ru": "Каналы", "en": "Channels" }, "value": "2" },
+      { "label": { "ru": "Совместимость", "en": "Compatibility" }, "value": { "ru": "Ворота, шлагбаумы, роллеты", "en": "Gates, barriers, shutters" } }
+    ]
+  }
+]

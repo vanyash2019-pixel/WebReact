@@ -1,0 +1,49 @@
+[
+  {
+    "id": 25,
+    "category": "svobodnyy-vyezd",
+    "name": { "ru": "CAME SMA Цифровой детектор транспортного средства", "en": "CAME SMA Digital Vehicle Detector" },
+    "price": 23000,
+    "image": "/assets/25.jpg",
+    "shortDescription": {
+      "ru": "Датчик магнитный одноканальный для обнаружения транспортных средств. Автоматическая настройка датчика. Самотестирование датчика. Совместимость с любой автоматической системой САМЕ.",
+      "en": "Single-channel magnetic sensor for vehicle detection. Automatic sensor calibration. Sensor self-testing. Compatible with any CAME automatic system."
+    },
+    "specs": [
+      { "label": { "ru": "Каналы", "en": "Channels" }, "value": "1" },
+      { "label": { "ru": "Настройка", "en": "Calibration" }, "value": { "ru": "Автоматическая", "en": "Automatic" } },
+      { "label": { "ru": "Совместимость", "en": "Compatibility" }, "value": "CAME" }
+    ]
+  },
+  {
+    "id": 26,
+    "category": "svobodnyy-vyezd",
+    "name": { "ru": "CAME SMA2 Цифровой детектор транспортного средства", "en": "CAME SMA2 Digital Vehicle Detector" },
+    "price": 30000,
+    "image": "/assets/26.jpg",
+    "shortDescription": {
+      "ru": "Датчик магнитный двухканальный для одновременного контроля двух независимых индукционных петель. Оптимальное решение для раздельного контроля въезда и выезда.",
+      "en": "Dual-channel magnetic sensor for simultaneous control of two independent induction loops. Optimal solution for separate entry and exit control."
+    },
+    "specs": [
+      { "label": { "ru": "Каналы", "en": "Channels" }, "value": "2" },
+      { "label": { "ru": "Назначение", "en": "Purpose" }, "value": { "ru": "Раздельный контроль въезда/выезда", "en": "Separate entry/exit control" } },
+      { "label": { "ru": "Совместимость", "en": "Compatibility" }, "value": "CAME" }
+    ]
+  },
+  {
+    "id": 27,
+    "category": "svobodnyy-vyezd",
+    "name": { "ru": "Кабель для индукционной петли CAME (50м)", "en": "CAME Induction Loop Cable (50m)" },
+    "price": 6500,
+    "image": "/assets/27.jpg",
+    "shortDescription": {
+      "ru": "Специализированный высокопрочный термостойкий провод для формирования витков индукционной петли в дорожном полотне под асфальт или плитку.",
+      "en": "Specialized high-strength heat-resistant wire for forming induction loop turns in road surface under asphalt or tiles."
+    },
+    "specs": [
+      { "label": { "ru": "Длина", "en": "Length" }, "value": "50 м" },
+      { "label": { "ru": "Тип", "en": "Type" }, "value": { "ru": "Термостойкий провод", "en": "Heat-resistant wire" } }
+    ]
+  }
+]

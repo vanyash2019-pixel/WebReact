@@ -1,0 +1,53 @@
+[
+  {
+    "id": 13,
+    "category": "avtomatika",
+    "name": { "ru": "Шлагбаум GARD 5000 (Серый)", "en": "Barrier Gate GARD 5000 (Gray)" },
+    "price": 115500,
+    "image": "/assets/1.jpg",
+    "shortDescription": {
+      "ru": "Тумба шлагбаума из оцинкованной стали в строгом сером цвете. Идеальное решение для проездов до 5 метров с высокой интенсивностью движения. Класс защиты IP54.",
+      "en": "Galvanized steel pedestal in strict gray color. Ideal solution for driveways up to 5 meters with high traffic intensity. IP54 protection rating."
+    },
+    "specs": [
+      { "label": { "ru": "Ширина проезда", "en": "Driveway width" }, "value": "5 м" },
+      { "label": { "ru": "Класс защиты", "en": "Protection rating" }, "value": "IP54" },
+      { "label": { "ru": "Цвет тумбы", "en": "Pedestal color" }, "value": { "ru": "Серый", "en": "Gray" } },
+      { "label": { "ru": "MCBF (циклов)", "en": "MCBF (cycles)" }, "value": "1,2 млн" }
+    ]
+  },
+  {
+    "id": 14,
+    "category": "avtomatika",
+    "name": { "ru": "Шлагбаум GARD 6500 Classico (Оранжевый)", "en": "Barrier Gate GARD 6500 Classico (Orange)" },
+    "price": 125700,
+    "image": "/assets/2.webp",
+    "shortDescription": {
+      "ru": "Массивный и надежный шлагбаум с классической ярко-оранжевой тумбой. Предназначен для перекрытия широких проездов до 6,5 метров на промышленных объектах.",
+      "en": "Massive and reliable barrier gate with classic bright orange pedestal. Designed for wide driveways up to 6.5 meters at industrial facilities."
+    },
+    "specs": [
+      { "label": { "ru": "Ширина проезда", "en": "Driveway width" }, "value": "6,5 м" },
+      { "label": { "ru": "Класс защиты", "en": "Protection rating" }, "value": "IP54" },
+      { "label": { "ru": "Цвет тумбы", "en": "Pedestal color" }, "value": { "ru": "Оранжевый", "en": "Orange" } },
+      { "label": { "ru": "MCBF (циклов)", "en": "MCBF (cycles)" }, "value": "1 млн" }
+    ]
+  },
+  {
+    "id": 15,
+    "category": "avtomatika",
+    "name": { "ru": "Шлагбаум GARD 4000SX (Компактный)", "en": "Barrier Gate GARD 4000SX (Compact)" },
+    "price": 75400,
+    "image": "/assets/3.jpeg",
+    "shortDescription": {
+      "ru": "Быстрый шлагбаум для левостороннего монтажа. Компактные размеры и высокая скорость открывания.",
+      "en": "Fast barrier gate for left-side installation. Compact size and high opening speed."
+    },
+    "specs": [
+      { "label": { "ru": "Ширина проезда", "en": "Driveway width" }, "value": "4 м" },
+      { "label": { "ru": "Время открывания", "en": "Opening time" }, "value": "2-6 сек" },
+      { "label": { "ru": "Монтаж", "en": "Installation" }, "value": { "ru": "Левосторонний", "en": "Left-side" } },
+      { "label": { "ru": "Интенсивность", "en": "Intensity" }, "value": { "ru": "Высокая", "en": "High" } }
+    ]
+  }
+]
