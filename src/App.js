@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import HeroSlider from './components/HeroSlider';
@@ -11,52 +12,109 @@ import MapSection from './components/MapSection';
 import CallbackSection from './components/CallbackSection';
 import Footer from './components/Footer';
 import ReviewModal from './components/ReviewModal';
+import NotFound from './components/NotFound';
+import CatalogPage from './components/CatalogPage';
+import FavoritesPage from './components/FavoritesPage';
+import CartPage from './components/CartPage';
 
 const ORG_NAME = 'ЕГДС';
-
-const aboutTitle = {
-  ru: 'Установка умной системы диспетчеризации',
-  en: 'Smart Dispatching System Installation',
-};
-
+const aboutTitle = { ru: 'Установка умной системы диспетчеризации', en: 'Smart Dispatching System Installation' };
 const equipmentItems = [
   {
     id: 1,
     title: { ru: 'Автоматика проезда', en: 'Access Automation' },
     icon: '/assets/barriers_7z3uzito3vkb 1.svg',
-    link: 'avtomatika.html',
+    link: '/catalog/avtomatika',
   },
   {
     id: 2,
     title: { ru: 'Свободный выезд', en: 'Free Exit' },
     icon: '/assets/exit_8xem5xs575cf 1.svg',
-    link: 'svobodnyy-vyezd.html',
+    link: '/catalog/svobodnyy-vyezd',
   },
   {
     id: 3,
     title: { ru: 'Радиоуправление', en: 'Radio Control' },
     icon: '/assets/remote_control_nw2uc52wjfq4 1.svg',
-    link: 'radioupravlenie.html',
+    link: '/catalog/radioupravlenie',
   },
 ];
 
+function HomePage() {
+  return (
+    <>
+      <HeroSlider />
+      <About title={aboutTitle} />
+      <EquipmentCatalog items={equipmentItems} />
+      <WorksSection works={worksData} />
+      <StepsSection steps={stepsData} />
+      <PartnersSection partners={partnersData} />
+      <MapSection />
+      <CallbackSection />
+    </>
+  );
+}
+
 function App() {
+  const [favoriteIds, setFavoriteIds] = useState([]);
+  const [cart, setCart] = useState([]);
+
+  function handleToggleFavorite(productId) {
+    setFavoriteIds((prev) =>
+      prev.includes(productId)
+        ? prev.filter((id) => id !== productId)
+        : [...prev, productId]
+    );
+  }
+
+  function handleAddToCart(product) {
+    setCart((prev) => {
+      const found = prev.find((i) => i.id === product.id);
+      if (found) {
+        return prev.map((i) => (i.id === product.id ? { ...i, qty: i.qty + 1 } : i));
+      }
+      return [...prev, { ...product, qty: 1 }];
+    });
+  }
+
+  function handleRemoveFromCart(id) {
+    setCart((prev) => prev.filter((i) => i.id !== id));
+  }
+
   return (
     <div className="App">
       <Header orgName={ORG_NAME} />
       <main className="main">
-        <HeroSlider />
-        <About title={aboutTitle} />
-        <EquipmentCatalog items={equipmentItems} />
-        <WorksSection works={worksData} />
-        <StepsSection steps={stepsData} />
-        <PartnersSection partners={partnersData} />
-        <MapSection />
-        <CallbackSection />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/catalog/:category"
+            element={
+              <CatalogPage
+                favoriteIds={favoriteIds}
+                onToggleFavorite={handleToggleFavorite}
+                onAddToCart={handleAddToCart}
+              />
+            }
+          />
+          <Route
+            path="/favorites"
+            element={
+              <FavoritesPage
+                favoriteIds={favoriteIds}
+                onToggleFavorite={handleToggleFavorite}
+                onAddToCart={handleAddToCart}
+              />
+            }
+          />
+          <Route path="/cart" element={<CartPage cart={cart} onRemove={handleRemoveFromCart} />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
       <Footer orgName={ORG_NAME} />
       <ReviewModal />
     </div>
   );
 }
+
 export default App;
