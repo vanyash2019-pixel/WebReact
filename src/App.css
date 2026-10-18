@@ -388,162 +388,7 @@ line-height: 120%; /* 13.2px */
     opacity: 0.9; /* Чуть приглушенный белый */
 }
 /* Основная секция */
-.hero-slider {
-    margin-top: 40px;
-   background-color: var(--bg-main);
-    padding: 40px 0;
-    width: 100%;
-}
 
-.slider-wrapper {
-    position: relative;
-    /* Размеры строго по твоему скриншоту */
-    max-width: 1140px; 
-    height: 501px;
- 
-    margin: -38px 0 0 230px;
-    background: #F0F0F0; /* Твой цвет из Style */
-    border-radius: 5px; /* Твой радиус из Style */
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-}
-
-.slider-line {
-    display: flex;
-    height: 100%; /* Занимает всю высоту родителя */
-    width: 100%;
-    transition: transform 0.4s ease-out;
-}
-
-.slide {
-    flex: 0 0 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end; /* justify-content: flex-end из твоего Layout */
-    align-items: center;      /* align-items: center из твоего Layout */
-    
-
-    padding: 43px 0 43px 570px; 
-    box-sizing: border-box;
-    position: relative;
-}
-
-.slide img {
-    pointer-events: none; /* Чтобы мышь не хватала саму картинку */
-}
-
-.slider-wrapper:active {
-    cursor: grabbing;
-}
-
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.slide-content {
-    position: absolute;
-    left: 40px; /* Отступ текста от левого края коробки */
-    top: 47%;
-    transform: translateY(-50%);
-    width: 500px; /* Ограничиваем ширину текста, чтобы не налезал на картинку */
-    z-index: 2;
-}
-
-.slide-picture {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slide-picture img {
-    max-height: 100%;
-    width: auto;
-    object-fit: contain;
-}
-.slide-title {
-   color: var(---, #000);
-font-family: Roboto;
-font-size: 32px;
-font-style: normal;
-font-weight: 400;
-line-height: 120%; /* 38.4px */
-margin-bottom: 30px;
-}
-
-.slide-list {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 30px;
-}
-
-.slide-item {
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 10px;
-    font-weight: 400; /* Твой font-weight */
-    font-size: 15px;
-}
-
-.slide-item::before {
-    content: "";
-    position: absolute;
-    left: 0; top: 8px;
-    width: 8px; height: 8px;
-    background-color: #dc061f;
-    border-radius: 50%;
-}
-
-.slide-btn {
-    display: inline-block;
-    padding: 11px 23px;
-    background: #dc061f;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 700;
-}
-
-
-/* Точки */
-.slider-dots {
-    position: absolute;
-    bottom: 14px;
-    left: 53%;
-    transform: translateX(-52%);
-    display: flex;
-    gap: 10px;
-}
-
-/* Этот стиль сработает ТОЛЬКО для второго слайда */
-.slide-content--second {
-    /* Отрицательное значение в translateY поднимает блок вверх */
-    /* Подбери число (например, -20px или -40px), как тебе больше нравится */
-    transform: translateY(-180px) !important; 
-}
-.slide-content--third {
-    /* Здесь текста еще больше, можно поднять посильнее */
-    margin-top: -30px;
-}
-.slide-content--fourth {
-    /* Отрицательный маржин вытолкнет блок вверх */
-    margin-top: -40px; 
-}
-.dot {
-    width: 16px;
-    height: 16px;
-    border: 2px solid #dc061f;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.dot.active {
-    background: #dc061f;
-}
 /* Основная секция */
 /* --- СЕКЦИЯ О КОМПАНИИ --- */
 .about {
@@ -1630,8 +1475,57 @@ line-height: 120%; /* 21.6px */
 
 --- ВЫПАДАЮЩЕЕ МЕНЮ --- */
 
+/* ===== Выпадающее меню каталога ===== */
+.egds-navbar .dropdown-menu {
+    background: #fff;
+    border: none;
+    border-top: 3px solid #cc0000;
+    border-radius: 0 0 10px 10px;
+    padding: 8px 0;
+    min-width: 260px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    margin-top: 0;
+    animation: dropdownFade 0.2s ease;
+}
 
-/* Делаем так, чтобы карточка была базой для позиционирования */
+.egds-navbar .dropdown-item {
+    color: #333;
+    text-transform: none;
+    font-size: 16px;
+    padding: 12px 22px;
+    border-left: 3px solid transparent;
+    transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease, border-color 0.2s ease;
+}
+
+.egds-navbar .dropdown-item:hover,
+.egds-navbar .dropdown-item:focus {
+    background: #fdecec;
+    color: #cc0000;
+    border-left-color: #cc0000;
+    padding-left: 28px;
+}
+
+.egds-navbar .dropdown-item:active,
+.egds-navbar .dropdown-item.active {
+    background: #cc0000;
+    color: #fff;
+    border-left-color: #990000;
+}
+
+.egds-navbar .dropdown-toggle.show {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}точка была базой для позиционирования */
 .b-services-card-horizontal {
     position: relative;
     border: 1px solid #ddd;
@@ -2858,4 +2752,21 @@ margin-top:  30px;
 }
 .egds-navbar .nav-link:hover {
     background: rgba(0, 0, 0, 0.1);
+}
+
+.hero-carousel {
+    background: #f4f4f4;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+
+.hero-carousel .carousel-control-prev,
+.hero-carousel .carousel-control-next {
+    width: 6%;
+}
+
+.hero-carousel .carousel-indicators [data-bs-target] {
+    background-color: #cc0000;
 }
